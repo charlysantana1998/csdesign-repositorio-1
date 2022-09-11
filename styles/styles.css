@@ -2,8 +2,10 @@
     font-family: 'Roboto', sans-serif;
 }
 /*/ HEADER (todo el sitio) /*/
+header{
+}
 .cabecera{
-    margin-top: 1%;
+    background-image: linear-gradient(to left, rgb(0, 57, 93), #070e2200);
     grid-area: cabecera;
     display: flex;
     justify-content: space-between;
@@ -12,6 +14,7 @@
 }
 .logo{
     padding-left: 20%;
+    margin-top: 1%;
 }
 .menu{
     display: flex;
@@ -25,11 +28,16 @@
     color: #ffffff;
     list-style-type: none;
     text-decoration: none;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+.menu a:hover{
+    color: rgb(26, 198, 255);
 }
 /*/ FOOTER (todo el sitio) /*/
 .pie{
     grid-area: pie;
-    background-color: #11182D;
+    background-image: linear-gradient(to left, rgb(0, 57, 93), #070e2200);
     display: flex;
     justify-content: space-between;
     align-items: center;
