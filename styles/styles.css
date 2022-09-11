@@ -2,8 +2,6 @@
     font-family: 'Roboto', sans-serif;
 }
 /*/ HEADER (todo el sitio) /*/
-header{
-}
 .cabecera{
     background-image: linear-gradient(to left, rgb(0, 57, 93), #070e2200);
     grid-area: cabecera;
