@@ -1,718 +1,111 @@
-*{
-    font-family: 'Roboto', sans-serif;
+body{
+    background-color: #00001e;
+    min-height: 100vh;
 }
-/*/ HEADER (todo el sitio) /*/
-.cabecera{
-    background-image: linear-gradient(to left, rgb(0, 57, 93), #070e2200);
-    grid-area: cabecera;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: aliceblue;
+.header{
+    background-image: linear-gradient(to left, rgb(26, 26, 57), #00001e);
+    padding: 0%;
 }
 .logo{
-    padding-left: 20%;
-    margin-top: 1%;
+    padding: 5%;
 }
-.menu{
+.card{
+    color: white;
+}
+.card-group{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.cardColor{
+    background-color: #03314a;
+    border: 2px solid;
+}
+.botonCard{
+    color: white;
+    background-color: #00001e;
+    transition: all 0.5s;
+}
+.botonCard:hover{
+    background-color: aquamarine;
+    color: #00001e;
+}
+.itemMenu{
+    color: white;
+    transition: all 0.2s;
+}
+.itemMenu:hover{
+    color: aqua;
+}
+.titulos{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.titulos h1{
+    color: aqua;
+    font-weight: 800;
+}
+.titulos h2{
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    font-size: 110%;
+}
+.sobreMi{
     display: flex;
-    list-style-type: none;
-    width: 600px;
-    justify-content: space-evenly;
-    position: relative;
-    right: 12%;
-}
-.menu a{
-    color: #ffffff;
-    list-style-type: none;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.5s;
-}
-.menu a:hover{
-    color: rgb(26, 198, 255);
-}
-/*/ FOOTER (todo el sitio) /*/
-.pie{
-    grid-area: pie;
-    background-image: linear-gradient(to left, rgb(0, 57, 93), #070e2200);
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
+    padding-top: 85px;
 }
-.contenidoFooter{
-    width: 50%;
+.contenedorPortfolio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 6%;
+    padding-bottom: 3%;
+}
+.contenedorFormulario{
+    padding-top: 4%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+.formulario{
+    width: 25%;
+    border-radius: 20px;
+    border: rgb(255, 255, 255)solid;
+}
+form{
+    color: white;
+    padding: 7%;
+}
+.pie{
+    margin-top: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to left, rgb(26, 26, 57), #00001e);
+    position: relative;
+    top: 7em;
 }
 .legal{
-    color: #757575;
-    padding-left: 10%;
-    font-weight: 300;
+    font-size: 100%;
 }
-.redes{
-    width: 2em;
-}
-.redesTodas{
+.listaRedes{
     display: flex;
-    justify-content: space-evenly;
-}
-/*/ ESTRUCTURA DEL HOME /*/
-.grilla{
-    margin: 0%;
-    background-color: #000418;
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(2,  1fr);
-    grid-template-rows: 1fr 4fr 4fr 1fr;
-    grid-template-areas:
-    "cabecera       cabecera"
-    "tituloHome     imagenHome"
-    "decoracionHome imagenHome"
-    "pie            pie";
-}
-/*/ ESTILOS DEL HOME /*/
-.tituloHome{
-    grid-area: tituloHome;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    color: rgb(26, 198, 255);
-    padding-left: 15%;
-}
-.tituloHome h1{
-    display: flex;
-    position: relative;
-    top: 15%;
-    font-size: 400%;
-    font-weight: 700;
-}
-.tituloHome h2{
-    font-weight: 100;
-    color: #ffffff;
-}
-.decoracionHome{
-    grid-area: decoracionHome;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    top: 5%;
-}
-.imagenHome{
-    grid-area: imagenHome;
-    display: flex;
-    position: relative;
-    bottom: 1%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    list-style-type: none;
+    text-decoration: none;
 }
-.trabajoDestacado{
-    width: 75%;
-    border-radius: 20px;
+.itemRedes{
+    width: 30px;
+    margin-top: 1rem;
 }
-/*/ ESTRUCTURA DE SERVICIOS /*/
-.grillaServicios{
-    margin: 0%;
-    background-color: #000418;
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(2,  1fr);
-    grid-template-rows: 1fr 8fr 1fr;
-    grid-template-areas:
-    "cabecera          cabecera"
-    "titulosServicios  decoracionServicios"
-    "pie               pie";
-}
-/*/ ESTILOS DE SERVICIOS /*/
-.contenidoServicios{
-    grid-area: titulosServicios;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 6%;
-    padding-top: 5%;
-}
-.contenidoServicios h1{
-    color: rgb(26, 198, 255);
-    font-size: 300%;
-    line-height: 20%;
-}
-.contenidoServicios h2{
-    color: white;
-}
-.contenidoServicios p{
-    text-align: center;
-    color: white;
-    display: flex;
-    position: relative;
-    bottom: 5%;
-    font-weight: 100;
-}
-.decoracionServicios{
-    grid-area: decoracionServicios;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/*/ ESTRUCTURA DE SOBRE MI /*/
-.grillaSobreMi{
-    margin: 0%;
-    background-color: #000418;
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(2,  1fr);
-    grid-template-rows: 1fr 8fr 1fr;
-    grid-template-areas:
-    "cabecera          cabecera"
-    "charly            titulosSobreMi"
-    "pie               pie";
-}
-/*/ ESTILOS DE SOBRE MI /*/
-.charly{
-    grid-area: charly;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.charly img{
-    border-radius: 50%;
-    border: 2px solid white;
-    display: flex;
-    position: relative;
-    bottom: 5%;
-}
-.contenidoSobreMi{
-    grid-area: titulosSobreMi;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    bottom: 6%;
-    right: 15%;
-}
-.contenidoSobreMi h1{
-    color: rgb(26, 198, 255);
-    font-size: 250%;
-    line-height: 20%;
-}
-.contenidoSobreMi p{
-    color: white;
-    font-weight: 100;
-}
-/*/ ESTRUCTURA DE PORTFOLIO /*/
-.grillaPortfolio{
-    margin: 0%;
-    background-color: #000418;
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(2,  1fr);
-    grid-template-rows: 1fr 8fr 1fr;
-    grid-template-areas:
-    "cabecera             cabecera"
-    "decoracionPortfolio  titulosPortfolio"
-    "pie                  pie";
-}
-/*/ ESTILOS DE PORTFOLIO /*/
-.contenidoPortfolio{
-    grid-area: titulosPortfolio;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    bottom: 5%;
-}
-.contenidoPortfolio h1{
-    color: rgb(26, 198, 255);
-    font-size: 250%;
-    line-height: 20%;
-}
-.contenidoPortfolio h2{
-    color: white;
-    line-height: 20%;
-}
-.decoracionPortfolio{
-    grid-area: decoracionPortfolio;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/*/ ESTRUCTURA DE CONTACTO /*/
-.grillaContacto{
-    margin: 0%;
-    background-color: #000418;
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(2,  1fr);
-    grid-template-rows: 1fr 8fr 1fr;
-    grid-template-areas:
-    "cabecera             cabecera"
-    "decoracionContacto   contenidoContacto"
-    "pie                  pie";
-}
-/*/ ESTILOS DE CONTACTO /*/
-.contenidoContacto{
-    grid-area: contenidoContacto;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    left: 10%;
-}
-.contenidoContacto h1{
-    color: rgb(26, 198, 255);
-    font-size: 250%;
-    line-height: 20%;
-}
-.decoracionContacto{
-    grid-area: decoracionContacto;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    position: relative;
-    right: 10%;
-}
-
-/*/ TABLET /*/
-
-@media screen and (max-width: 1200px) {
-        
-    /*/header/*/
-    
-    .cabecera{
-        grid-area: cabecera;
-        flex-direction: column;
-        justify-content: center;
-        color: aliceblue;
-    }
-    .logo{
-        padding-left: 0%;
-    }
-    .menu{
-        position: relative;
-        right: 0%;
-    }
-
-    /*/footer/*/
-
-    .pie{
-        grid-area: pie;
-        background-color: #11182D;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-    }
-    .legal{
-    font-size: 90%;
-    }
-    .redesTodas{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .redes{
-        width: 1em;
-    }
-
-    /*/home/*/
-
-    .grilla{
-        margin: 0%;
-        background-color: #000418;
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 4fr 4fr 1fr;
-        grid-template-areas:
-        "cabecera"
-        "tituloHome"
-        "imagenHome"
-        "pie";
-    }
-    .decoracionHome{
-        display: none;
-    }
-    .tituloHome{
-        grid-area: tituloHome;
+@media screen and (max-width:990px ) {
+    .contenedorPortfolio{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: rgb(26, 198, 255);
-        padding-left: 0%;
-        position: relative;
-        bottom: 5%;
     }
-    .tituloHome h1{
-        display: flex;
-        position: relative;
-        top: 0%;
-        font-size: 350%;
-        font-weight: 700;
+    .cardPortfolio{
+        margin-bottom: 5%;
     }
-    .tituloHome h2{
-        font-size: 130%;
-        position: relative;
-        bottom: 20%;
-    }
-    .imagenHome{
-        position: relative;
-        bottom: 20%;
-    }
-    .trabajoDestacado{
-        width: 40%;
-        border-radius: 15px;
-    }
-
-    /*/servicios/*/
-
-    .grillaServicios{
-        margin: 0%;
-        background-color: #000418;
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 8fr 1fr;
-        grid-template-areas:
-        "cabecera"
-        "titulosServicios "
-        "pie";
-    }
-    .contenidoServicios{
-        grid-area: titulosServicios;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 0%;
-    }
-    .contenidoServicios h1{
-        color: rgb(26, 198, 255);
-        font-size: 300%;
-        line-height: 20%;
-    }
-    .contenidoServicios h2{
-        color: white;
-        line-height: 20%;
-        
-    }
-    .contenidoServicios p{
-        text-align: center;
-        color: white;
-        display: flex;
-        position: relative;
-        bottom: 0%;
-        font-weight: 100;
-    }
-    .decoracionServicios{
-        display: none;
-    }
-
-    /*/sobre mi/*/
-    
-    .charly img{
-        border-radius: 50%;
-        width: 40%;
-        border: 2px solid white;
-        display: flex;
-        position: relative;
-        bottom: 5%;
-    }
-
-    /*/portfolio/*/
-    .contenidoPortfolio h2{
-        line-height: normal;
-        padding-right: 5%;
-    }
-
-    .decoracionPortfolio img{
-        width: 50%;
-    }
-
-    /*/contacto/*/
-
-    .decoracionContacto img{
-        width: 50%;
-    }
-}
-
-/*/ MOBILE /*/
-
-@media screen and (max-width: 600px) {
-        
-    /*/header/*/
-    
-    .cabecera{
-        grid-area: cabecera;
-        flex-direction: column;
-        justify-content: center;
-        color: aliceblue;
-    }
-    .logo{
-        padding-left: 0%;
-    }
-    .menu{
-        width: auto;
-        padding: 0%;
-        position: relative;
-        right: 0%;
-    }
-    .menu li{
-        font-size: small;
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-
-    /*/footer/*/
-
-    .pie{
-        grid-area: pie;
-        background-color: #11182D;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-    }
-    .legal{
-        padding: 0%;
-        font-size: 40%;
-        display: flex;
-        justify-content: center;
-        line-height: 400%;
-    }
-    .redesTodas{
-        display: flex;
-        justify-content: space-around;
-    }
-    .redes{
-        padding-bottom: 80%;
-        width: 1em;
-    }
-
-    /*/home/*/
-
-    .grilla{
-        margin: 0%;
-        background-color: #000418;
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 4fr 4fr 1fr;
-        grid-template-areas:
-        "cabecera"
-        "tituloHome"
-        "imagenHome"
-        "pie";
-    }
-    .decoracionHome{
-        display: none;
-    }
-    .tituloHome{
-        grid-area: tituloHome;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: rgb(26, 198, 255);
-        padding-left: 0%;
-        position: relative;
-        bottom: 5%;
-    }
-    .tituloHome h1{
-        display: flex;
-        position: relative;
-        top: 0%;
-        font-size: 200%;
-        font-weight: 700;
-        line-height: 250%;
-    }
-    .tituloHome h2{
-        font-size: 83%;
-        position: relative;
-        bottom: 20%;
-    }
-    .imagenHome{
-        position: relative;
-        bottom: 20%;
-    }
-    .trabajoDestacado{
-        width: 100%;
-        border-radius: 0px;
-    }
-
-    /*/servicios/*/
-
-    .grillaServicios{
-        margin: 0%;
-        background-color: #000418;
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 8fr 1fr;
-        grid-template-areas:
-        "cabecera"
-        "titulosServicios "
-        "pie";
-    }
-    .contenidoServicios{
-        grid-area: titulosServicios;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 0%;
-    }
-    .contenidoServicios h1{
-        color: rgb(26, 198, 255);
-        font-size: 200%;
-        line-height: 20%;
-    }
-    .contenidoServicios h2{
-        color: white;
-        line-height: 20%;
-    }
-    .contenidoServicios p{
-        text-align: center;
-        color: white;
-        display: flex;
-        font-weight: 100;
-        padding-left: 5%;
-        padding-right: 5%;
-        font-size: 80%;
-        position: relative;
-        bottom: 3%;
-    }
-    .decoracionServicios{
-        display: none;
-    }
-
-    /*/sobre mi/*/
-
-    .grillaSobreMi{
-        margin: 0%;
-        background-color: #000418;
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 3fr 5fr 1fr;
-        grid-template-areas:
-        "cabecera"
-        "charly"
-        "titulosSobreMi"
-        "pie";
-    }
-    .charly{
-        grid-area: charly;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .charly img{
-        border-radius: 50%;
-        border: 2px solid white;
-        display: flex;
-        position: relative;
-        bottom: 0%;
-    }
-    .contenidoSobreMi{
-        grid-area: titulosSobreMi;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        bottom: 0%;
-        right: 0%;
-    }
-    .contenidoSobreMi h1{
-        color: rgb(26, 198, 255);
-        font-size: 250%;
-        line-height: 20%;
-        text-align: center;
-    }
-    .contenidoSobreMi p{
-        padding-left: 5%;
-        padding-right: 5%;
-        text-align: center;
-        color: white;
-        font-weight: 100;
-        position: relative;
-        bottom: 10%;
-    }
-    /*/portfolio/*/
-    .grillaPortfolio{
-        margin: 0%;
-        background-color: #000418;
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 4fr 4fr 1fr;
-        grid-template-areas:
-        "cabecera"
-        "titulosPortfolio"
-        "decoracionPortfolio"
-        "pie";
-    }
-    .contenidoPortfolio{
-        grid-area: titulosPortfolio;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        bottom: 0%;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    .contenidoPortfolio h1{
-        color: rgb(26, 198, 255);
-        font-size: 200%;
-        line-height: 20%;
-    }
-    .contenidoPortfolio h2{
-        text-align: center;
-        color: white;
-        line-height: normal;
-        font-size: small;
-    }
-    .decoracionPortfolio{
-        grid-area: decoracionPortfolio;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        bottom: 15%;
-    }
-
-    /*/contacto/*/
-
-    .grillaContacto{
-        margin: 0%;
-        background-color: #000418;
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 8fr 1fr;
-        grid-template-areas:
-        "cabecera"
-        "contenidoContacto"
-        "pie";
-    }
-    .contenidoContacto{
-        position: relative;
-        left: 10%;
-        bottom: 0%;
-    }
-    .contenidoContacto h1{
-        color: rgb(26, 198, 255);
-        font-size: 250%;
-        line-height: 20%;
-    }
-    .decoracionContacto{
-        display: none;
-    }
-}

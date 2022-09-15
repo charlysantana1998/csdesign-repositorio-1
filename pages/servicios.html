@@ -4,47 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>CSDESIGN</title>
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body class="grillaServicios">
-    <header class="border cabecera">
-        <a href="../index.html"><img class="logo" src="../images/LOGO.png"></a>
-        <nav>
-            <ul class="menu">
-                <a href="../index.html"><li>HOME</li></a>
-                <a href="./servicios.html"><li>SERVICIOS</li></a>
-                <a href="./sobremi.html"><li>SOBRE MI</li></a>
-                <a href="./portfolio.html"><li>PORTFOLIO</li></a>
-                <a href="./contacto.html"><li>CONTACTO</li></a>
+<body>
+    <!--NAV BAR-->
+    <nav class="navbar navbar-expand-lg bg-light header">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img src="../images/LOGO.png" class="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item ">
+                <a class="nav-link itemMenu" href="../index.html">HOME</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link itemMenu" href="../pages/servicios.html">SERVICIOS</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link itemMenu" href="../pages/sobremi.html">SOBRE MI</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link itemMenu" href="../pages/portfolio.html">PORTFOLIO</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link itemMenu" href="../pages/contacto.html">CONTACTO</a>
+              </li>
             </ul>
-        </nav>
-    </header>
-    <article class="contenidoServicios">
-        <h1>SERVICIOS</h1>
-        <h2>Branding</h2>
-        <p>Me contas tu idea y me encargo de crear la identidad visual de tu marca, desde el logotipo, hasta la papeleria papeleria corporativa.</p>
-        <h2>Diseño publicitario</h2>
-        <p>Es tu camino a seguir si lo que buscas es que tus productos y servicios se destaquen del resto tanto en redes como en medios físicos</p>
-        <h2>Marketing digital</h2>
-        <p>Tambien puedo ayudarte a desarrollar una estrategia optima para alcanzar a tu publico ideal, de la mejor manera.</p>
-    </article>
-    <div class="decoracionServicios">
-        <img src="../images/DECORACION2.png">
-    </div>
-    <footer class="border pie">
-        <section class="contenidoFooter">
-            <h3 class="legal">© 2022 CSDESIGN, todos los derechos reservados</h3>
-            </section>
-            <div class="contenidoFooter redesTodas">
-            <a target="_blank" href="https://www.facebook.com/profile.php?id=100000617238303"><img class="redes" src="../images/ICONO FB.png"></a>
-            <a target="_blank" href="https://www.instagram.com/4th.dim.studio/"><img class="redes" src="../images/ICONO IG.png"></a>
-            <a target="_blank" href="https://www.linkedin.com/in/carlos-santana-b77580180/"><img class="redes" src="../images/ICONO LI.png"></a>
-            <a target="_blank" href="https://walink.co/bcc22c"><img class="redes" src="../images/ICONO WP.png"></a>
+            </form>
+          </div>
         </div>
-    </footer>
+      </nav>
+      
+      <!--CUERPO-->
+      <div class="titulos bord text-center">
+        <h1>SERVICIOS</h1>
+      </div>
+
+
+      <div class="card-group">
+        <div class="card cardColor">
+          <img src="../images/BRANDING.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BRANDING</h5>
+            <p class="card-text">Me contas tu idea y me encargo de crear la identidad visual de tu marca, desde el logotipo, hasta la papeleria papeleria corporativa.</p>
+            <button type="button" class="btn btn-info botonCard">Solicitar</button>
+          </div>
+        </div>
+        <div class="card cardColor">
+          <img src="../images/DISPUBLICITARIO.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">DISEÑO PUBLICITARIO</h5>
+            <p class="card-text">Es tu camino a seguir si lo que buscas es que tus productos y servicios se destaquen del resto tanto en redes como en medios físicos</p>
+            <button type="button" class="btn btn-info botonCard">Solicitar</button>
+
+          </div>
+        </div>
+        <div class="card cardColor">
+          <img src="../images/MARKETING.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">MARKETING DIGITAL</h5>
+            <p class="card-text">Tambien puedo ayudarte a desarrollar una estrategia optima para alcanzar a tu publico ideal, de la mejor manera.<br>.
+
+            </p>
+            <button type="button" class="btn btn-info botonCard">Solicitar</button>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!--FOOTER-->
+      <footer class="footer mt-auto py-3 bg-light pie ">
+        <div class="container col-sm-6 text-center">
+          <h3 class="legal">© CSDESIGN 2022, Todos los derechos reservados</h3>
+        </div>
+        <div class="container col-sm-6 text-center">
+          <ul class="listaRedes">
+            <li><a href="#"><img class="itemRedes" src="../images/ICONO IG.png" alt=""></a></li>
+            <li><a href="#"><img class="itemRedes" src="../images/ICONO WP.png" alt=""></a></li>
+            <li><a href="#"><img class="itemRedes" src="../images/ICONO FB.png" alt=""></a></li>
+            <li><a href="#"><img class="itemRedes" src="../images/ICONO LI.png" alt=""></a></li>
+          </ul>
+        </div>
+      </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
