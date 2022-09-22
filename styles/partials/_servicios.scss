@@ -1,0 +1,47 @@
+/*/ESTILOS DE SERVICIOS/*/
+
+.cuerpoServicios{
+    display: grid;
+    grid-template-columns: repeat(2,  1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "contenidoServicios        decoracionServicios"
+    "contenidoServicios        decoracionServicios"
+}
+.contenidoServicios{   
+    grid-area: contenidoServicios;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        text-align: center;
+        max-width: 50%;
+    }
+    h2{
+        text-align: center;
+        max-width: 50%;
+        line-height: 50%;
+    }
+    p{
+        text-align: center;
+        max-width: 50%;
+        position: relative;
+        bottom: 5%;
+    }
+}
+
+.decoracionServicios{
+    grid-area: decoracionServicios;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .circuloVertical{
+        color: $colorDecoracion;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        &:hover{
+            color: $colorDecoracionHover;
+        }
+    }
+}
