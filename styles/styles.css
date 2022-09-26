@@ -205,42 +205,40 @@ body {
   grid-template-rows: 1fr;
   grid-template-areas: "contenidoServicios        decoracionServicios" "contenidoServicios        decoracionServicios";
 }
-
-.contenidoServicios {
+.cuerpoServicios .contenidoServicios {
   grid-area: contenidoServicios;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contenidoServicios h1 {
+.cuerpoServicios .contenidoServicios h1 {
   text-align: center;
   max-width: 50%;
 }
-.contenidoServicios h2 {
+.cuerpoServicios .contenidoServicios h2 {
   text-align: center;
   max-width: 50%;
   line-height: 50%;
 }
-.contenidoServicios p {
+.cuerpoServicios .contenidoServicios p {
   text-align: center;
   max-width: 50%;
   position: relative;
   bottom: 5%;
 }
-
-.decoracionServicios {
+.cuerpoServicios .decoracionServicios {
   grid-area: decoracionServicios;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.decoracionServicios .circuloVertical {
+.cuerpoServicios .decoracionServicios .circuloVertical {
   color: rgba(252, 159, 255, 0.745);
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.decoracionServicios .circuloVertical:hover {
+.cuerpoServicios .decoracionServicios .circuloVertical:hover {
   color: white;
 }
 
@@ -253,18 +251,21 @@ body {
     grid-template-rows: 1fr;
     grid-template-areas: "contenidoServicios" "contenidoServicios";
   }
-  .contenidoServicios p {
+  .cuerpoServicios .contenidoServicios p {
     text-align: center;
     max-width: 80%;
     position: relative;
     bottom: 5%;
   }
-  .decoracionServicios {
+  .cuerpoServicios .decoracionServicios {
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  .contenidoServicios {
+  .cuerpoServicios {
+    display: flex;
+  }
+  .cuerpoServicios .contenidoServicios {
     grid-area: contenidoServicios;
     display: flex;
     flex-direction: column;
@@ -272,16 +273,16 @@ body {
     padding: 1rem;
     font-size: 70%;
   }
-  .contenidoServicios h1 {
-    text-align: center;
+  .cuerpoServicios .contenidoServicios h1 {
+    text-align: left;
     max-width: 50%;
   }
-  .contenidoServicios h2 {
+  .cuerpoServicios .contenidoServicios h2 {
     text-align: left;
     max-width: 50%;
     line-height: 100%;
   }
-  .contenidoServicios p {
+  .cuerpoServicios .contenidoServicios p {
     text-align: left;
     max-width: 95%;
     position: relative;
