@@ -1,0 +1,99 @@
+/*/ FOOTER (todo el sitio) /*/
+
+.pie{
+    max-height: 3.5rem;
+    color: rgba(252, 159, 255, 0.745);
+    border: 2px solid;
+    border-radius: 20px;
+    margin: 1rem 2rem 1rem 2rem;
+    padding: 0.5rem;
+    background-color: #0004186c;
+    grid-area: pie;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.7s;
+    &:hover{
+        color: rgb(255, 255, 255);
+        background-color: #000a39b4;
+    }
+    .contenidoFooter{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        .legal{
+            color: #ffffff79;
+            font-weight: 300;
+            padding-right: 20%;
+            cursor: default;
+        }
+        .redesTodas{
+            display: flex;
+            list-style-type: none;
+            width: 50%;
+            padding-left: 11%;
+            justify-content: space-around;
+            a{
+                color: rgba(255, 255, 255, 0.577);
+                font-size: 150%;
+                transition: all 0.5s;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+/*/TABLET/*/
+
+@media screen and (max-width: 1200px) {
+
+    .pie{
+        max-height: 10rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .contenidoFooter{
+            width: 100%;
+            display: flex;
+            .legal{
+                color: #ffffff79;
+                font-size: 80%;
+                font-weight: 300;
+                padding-right: 0%;
+            }
+            .redesTodas{
+                display: flex;
+                list-style-type: none;
+                width: 100%;
+                padding-left: 0%;
+                justify-content: space-around;
+                a{
+                    color: rgba(255, 255, 255, 0.577);
+                    font-size: 100%;
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+}
+
+/*/MOBILE/*/
+
+@media screen and (max-width: 600px) {
+
+    .pie{
+        display: flex;
+        flex-direction: column;
+        .redesTodas{
+            padding-left: 15%;
+            position: relative;
+            left: 10%;
+            a{
+                font-size: 100%;
+            }    
+        } 
+    }
+}

@@ -1,0 +1,45 @@
+/*/ESTILOS DE CONTACTO/*/
+
+.contenidoContacto{
+    margin: 3%;
+    position: relative;
+    left: 40%;
+    input{
+        @include contact($colorDefault:rgba(252, 159, 255, 0.745), $borderContact:none)
+    }
+    textarea{
+        @include contact($colorDefault:rgba(252, 159, 255, 0.745), $borderContact:none)
+    }
+    select{
+        background-color: rgba(252, 159, 255, 0.745);
+        border: none;
+        padding: 1em;
+
+    }
+}
+
+
+/*/TABLET/*/
+
+@media screen and (max-width: 1200px) {
+
+    .contenidoContacto{
+        color: white;
+        margin: 3%;
+        position: relative;
+        left: 35%;
+    }
+
+}
+
+/*/MOBILE/*/
+
+@media screen and (max-width: 600px) {
+
+    .contenidoContacto{
+        margin: 3%;
+        position: relative;
+        left: 5%;
+    }
+
+}

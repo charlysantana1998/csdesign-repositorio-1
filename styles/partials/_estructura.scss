@@ -1,0 +1,14 @@
+/*/ ESTRUCTURA GENERAL DEL SITIO/*/
+
+.grilla{
+    margin: 0%;
+    background-image: radial-gradient(circle at 50% 0%,#8900ff, #db12ff, #ff24dc);
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(2,  1fr);
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas:
+    "cabecera       cabecera"
+    "cuerpo         cuerpo"
+    "pie            pie";
+}

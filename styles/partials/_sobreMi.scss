@@ -1,0 +1,70 @@
+/*/ESTILOS SOBRE MI/*/
+
+.cuerpoSobreMi{
+    display: grid;
+    grid-template-columns: repeat(2,  1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "charly        contenidoSobreMi";
+    .charly{
+        grid-area: charly;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            border: 2px solid;
+        }
+    }
+    .contenidoSobreMi{
+        grid-area: contenidoSobreMi;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 30%;
+        right: 20%;
+    }    
+}
+
+/*/TABLET/*/
+
+@media screen and (max-width: 1200px) {
+
+    .cuerpoSobreMi{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,  1fr);
+        grid-template-areas:
+        "charly             charly"
+        "contenidoSobreMi   contenidoSobreMi";
+        .charly{
+            padding-top: 5%;
+            img{
+                width: 10rem;
+            }
+        }
+        .contenidoSobreMi{
+            grid-area: contenidoSobreMi;
+            display: flex;
+            padding: 5%;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            top: 0%;
+            right: 0%;
+            h1{
+                line-height: 10%;
+            }
+        }
+    }
+}
+
+/*/MOBILE/*/
+
+@media screen and (max-width: 600px) {
+
+    .contenidoSobreMi{
+        font-size: 70%;
+    }
+
+}

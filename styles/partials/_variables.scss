@@ -1,2 +1,37 @@
+/*/Variables sueltas/*/
+
 $colorDecoracion: rgba(252, 159, 255, 0.745);
 $colorDecoracionHover: white;
+$seccion: #0004186c;
+$seccionHover: #000a39b4;
+
+/*/MAPA (lo uso en el home)/*/
+
+$colores: (
+    colorDecoracion: rgba(252, 159, 255, 0.745),
+    colorDecoracionHover: white,
+    seccion: #0004186c,
+    seccionHover: #000a39b4
+);
+
+/*/EXTEND (lo uso en portfolio)/*/
+
+%linkPortfolio {
+            border: 2px solid;
+            padding: 0,5%;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.5s;
+            &:hover{
+                color: white;
+            }
+}
+
+/*/MIXIN (lo uso en contacto)/*/
+
+@mixin contact($colorDefault, $borderContact) {
+        border-radius: 10px;
+        background-color: $colorDefault;
+        border: $borderContact;
+        padding: 1em;
+}

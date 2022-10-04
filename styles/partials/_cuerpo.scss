@@ -1,0 +1,16 @@
+/*/CUERPO (todo el sitio)/*/
+
+.cuerpo{
+    grid-area: cuerpo;
+    color: rgba(252, 159, 255, 0.745);
+    background-color: #0004186c;
+    border: 2px solid;
+    border-radius: 20px;
+    margin: 0rem 2rem 0rem 2rem;
+    overflow: hidden;
+    transition: all 0.5s;
+    &:hover{
+        color: rgb(255, 255, 255);
+        background-color: #000a39b4;
+    }
+}

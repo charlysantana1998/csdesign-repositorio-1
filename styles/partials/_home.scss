@@ -1,0 +1,144 @@
+/*/ ESTILOS DEL HOME /*/
+
+.cuerpoHome{
+    display: grid;
+    grid-template-columns: repeat(2,  1fr);
+    grid-template-rows: repeat(2,  1fr);
+    grid-template-areas:
+    "tituloHome        contenidoHome"
+    "decoracionHome    contenidoHome";
+    .tituloHome{
+        grid-area: tituloHome;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 2rem;
+    }
+    .decoracionHome{
+        grid-area: decoracionHome;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        .circulo{
+            width: 5rem;
+            height: 5rem;
+            background-color: map-get($colores, colorDecoracion);
+            border-radius: 50%;
+            margin-left: 5%;
+            margin-right: 5%;
+            transition: all 0.5s;
+            &:hover{
+                background-color: map-get($colores, colorDecoracionHover);
+            }
+        }
+    }
+}
+.contenidoHome{
+    grid-area: contenidoHome;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 1rem;
+    .contenedorTrabajo{
+        max-width: 35rem;
+        max-height: 22.5rem;
+        border-radius: 20px;
+        overflow: hidden;
+        .trabajoDestacado{
+            color: map-get($colores, colorDecoracion);
+            width: 35rem;
+            border-top: 2.5rem solid;
+            border-bottom: 2.5rem solid;
+            transition: all 0.5s;
+            &:hover{
+                color: map-get($colores, colorDecoracionHover);
+            }
+        }
+    }
+}
+
+/*/TABLET/*/
+
+@media screen and (max-width: 1200px) {
+
+    .cuerpoHome{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,  1fr);
+        grid-template-areas:
+        "tituloHome"
+        "contenidoHome";
+        .tituloHome{
+            grid-area: tituloHome;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:1.5rem;
+        }
+        .decoracionHome{
+            display: none;
+        }
+    }
+    .contenidoHome{
+        grid-area: contenidoHome;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 0rem;
+        bottom: 25%;
+        .contenedorTrabajo{
+            max-width: auto;
+            max-height: auto;
+            border-radius: 0px;
+            overflow: hidden;
+            .trabajoDestacado{
+                color: map-get($colores, colorDecoracion);
+                width: 25rem;
+                border-top: 0rem solid;
+                border-bottom: 0rem solid;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+/*/MOBILE/*/
+
+@media screen and (max-width: 600px) {
+
+    .cuerpoHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .tituloHome{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            margin-bottom: 30%;
+            padding-top: 10%;
+        }
+    }
+    .contenidoHome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 0rem;
+        .contenedorTrabajo{
+            max-width: 35rem;
+            max-height: 22.5rem;
+            border-radius: 0%;
+            overflow: hidden;
+            .trabajoDestacado{
+                color: map-get($colores, colorDecoracion);
+                width: 100%;
+                border-top: 0rem solid;
+                border-bottom: 0rem solid;
+                border-radius: 0%;              
+            }
+        }
+    }
+
+}

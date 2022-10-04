@@ -1,3 +1,19 @@
+/*/Variables sueltas/*/
+/*/MAPA (lo uso en el home)/*/
+/*/EXTEND (lo uso en portfolio)/*/
+.cuerpoPortfolio .contenidoPortfolio .linkDos, .cuerpoPortfolio .contenidoPortfolio .linkUno {
+  border: 2px solid;
+  padding: 0, 5%;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.cuerpoPortfolio .contenidoPortfolio .linkDos:hover, .cuerpoPortfolio .contenidoPortfolio .linkUno:hover {
+  color: white;
+}
+
+/*/MIXIN (lo uso en contacto)/*/
+/*/ESTILOS BASE/*/
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -20,18 +36,15 @@ body {
   color: rgba(252, 159, 255, 0.745);
   transition: all 0.7s;
 }
-
 .cabecera:hover {
   color: rgb(255, 255, 255);
   background-color: rgba(0, 10, 57, 0.7058823529);
 }
-
-.logo {
+.cabecera .logo {
   padding-left: 20%;
   margin-top: 1%;
 }
-
-.menu {
+.cabecera .menu {
   display: flex;
   list-style-type: none;
   width: 600px;
@@ -39,19 +52,69 @@ body {
   position: relative;
   right: 12%;
 }
-
-.menu a {
+.cabecera .menu a {
   color: #ffffff;
   list-style-type: none;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s;
 }
-
-.menu a:hover {
+.cabecera .menu a:hover {
   color: rgb(26, 198, 255);
 }
 
+/*/TABLET/*/
+@media screen and (max-width: 1200px) {
+  .cabecera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cabecera .logo {
+    padding-left: 0%;
+    margin-top: 1%;
+  }
+  .cabecera .menu {
+    display: flex;
+    list-style-type: none;
+    width: auto;
+    justify-content: center;
+    position: relative;
+    right: 0%;
+  }
+  .cabecera .menu a {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+/*/MOBILE/*/
+@media screen and (max-width: 600px) {
+  .cabecera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cabecera .logo {
+    width: 60%;
+    position: relative;
+    left: 13%;
+  }
+  .cabecera .menu {
+    display: flex;
+    list-style-type: none;
+    width: auto;
+    justify-content: space-evenly;
+    position: relative;
+    right: 5%;
+  }
+  .cabecera .menu a {
+    font-size: 70%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
 /*/CUERPO (todo el sitio)/*/
 .cuerpo {
   grid-area: cuerpo;
@@ -63,7 +126,6 @@ body {
   overflow: hidden;
   transition: all 0.5s;
 }
-
 .cuerpo:hover {
   color: rgb(255, 255, 255);
   background-color: rgba(0, 10, 57, 0.7058823529);
@@ -84,43 +146,84 @@ body {
   align-items: center;
   transition: all 0.7s;
 }
-
 .pie:hover {
   color: rgb(255, 255, 255);
   background-color: rgba(0, 10, 57, 0.7058823529);
 }
-
-.contenidoFooter {
+.pie .contenidoFooter {
   width: 50%;
   display: flex;
   justify-content: center;
 }
-
-.legal {
+.pie .contenidoFooter .legal {
   color: rgba(255, 255, 255, 0.4745098039);
   font-weight: 300;
   padding-right: 20%;
   cursor: default;
 }
-
-.redesTodas {
+.pie .contenidoFooter .redesTodas {
   display: flex;
   list-style-type: none;
   width: 50%;
   padding-left: 11%;
   justify-content: space-around;
 }
-
-.redesTodas li a {
+.pie .contenidoFooter .redesTodas a {
   color: rgba(255, 255, 255, 0.577);
   font-size: 150%;
   transition: all 0.5s;
 }
-
-.redesTodas li a:hover {
+.pie .contenidoFooter .redesTodas a:hover {
   color: white;
 }
 
+/*/TABLET/*/
+@media screen and (max-width: 1200px) {
+  .pie {
+    max-height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .pie .contenidoFooter {
+    width: 100%;
+    display: flex;
+  }
+  .pie .contenidoFooter .legal {
+    color: rgba(255, 255, 255, 0.4745098039);
+    font-size: 80%;
+    font-weight: 300;
+    padding-right: 0%;
+  }
+  .pie .contenidoFooter .redesTodas {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0%;
+    justify-content: space-around;
+  }
+  .pie .contenidoFooter .redesTodas a {
+    color: rgba(255, 255, 255, 0.577);
+    font-size: 100%;
+    transition: all 0.5s;
+  }
+}
+/*/MOBILE/*/
+@media screen and (max-width: 600px) {
+  .pie {
+    display: flex;
+    flex-direction: column;
+  }
+  .pie .redesTodas {
+    padding-left: 15%;
+    position: relative;
+    left: 10%;
+  }
+  .pie .redesTodas a {
+    font-size: 100%;
+  }
+}
 /*/ ESTRUCTURA GENERAL DEL SITIO/*/
 .grilla {
   margin: 0%;
@@ -139,23 +242,20 @@ body {
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "tituloHome        contenidoHome" "decoracionHome    contenidoHome";
 }
-
-.tituloHome {
+.cuerpoHome .tituloHome {
   grid-area: tituloHome;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   font-size: 2rem;
 }
-
-.decoracionHome {
+.cuerpoHome .decoracionHome {
   grid-area: decoracionHome;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-
-.circulo {
+.cuerpoHome .decoracionHome .circulo {
   width: 5rem;
   height: 5rem;
   background-color: rgba(252, 159, 255, 0.745);
@@ -164,8 +264,7 @@ body {
   margin-right: 5%;
   transition: all 0.5s;
 }
-
-.circulo:hover {
+.cuerpoHome .decoracionHome .circulo:hover {
   background-color: white;
 }
 
@@ -177,27 +276,99 @@ body {
   position: relative;
   right: 1rem;
 }
-
-.contenedorTrabajo {
+.contenidoHome .contenedorTrabajo {
   max-width: 35rem;
   max-height: 22.5rem;
   border-radius: 20px;
   overflow: hidden;
 }
-
-.trabajoDestacado {
+.contenidoHome .contenedorTrabajo .trabajoDestacado {
   color: rgba(252, 159, 255, 0.745);
   width: 35rem;
   border-top: 2.5rem solid;
   border-bottom: 2.5rem solid;
   transition: all 0.5s;
 }
-
-.trabajoDestacado:hover {
+.contenidoHome .contenedorTrabajo .trabajoDestacado:hover {
   color: white;
 }
 
-/*/ESTILOS DE SERVICIOS/*/
+/*/TABLET/*/
+@media screen and (max-width: 1200px) {
+  .cuerpoHome {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "tituloHome" "contenidoHome";
+  }
+  .cuerpoHome .tituloHome {
+    grid-area: tituloHome;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  .cuerpoHome .decoracionHome {
+    display: none;
+  }
+  .contenidoHome {
+    grid-area: contenidoHome;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 0rem;
+    bottom: 25%;
+  }
+  .contenidoHome .contenedorTrabajo {
+    max-width: auto;
+    max-height: auto;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  .contenidoHome .contenedorTrabajo .trabajoDestacado {
+    color: rgba(252, 159, 255, 0.745);
+    width: 25rem;
+    border-top: 0rem solid;
+    border-bottom: 0rem solid;
+    border-radius: 20px;
+  }
+}
+/*/MOBILE/*/
+@media screen and (max-width: 600px) {
+  .cuerpoHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .cuerpoHome .tituloHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 30%;
+    padding-top: 10%;
+  }
+  .contenidoHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 0rem;
+  }
+  .contenidoHome .contenedorTrabajo {
+    max-width: 35rem;
+    max-height: 22.5rem;
+    border-radius: 0%;
+    overflow: hidden;
+  }
+  .contenidoHome .contenedorTrabajo .trabajoDestacado {
+    color: rgba(252, 159, 255, 0.745);
+    width: 100%;
+    border-top: 0rem solid;
+    border-bottom: 0rem solid;
+    border-radius: 0%;
+  }
+}
 /*/ESTILOS DE SERVICIOS/*/
 .cuerpoServicios {
   display: grid;
@@ -234,16 +405,19 @@ body {
   justify-content: center;
 }
 .cuerpoServicios .decoracionServicios .circuloVertical {
-  color: rgba(252, 159, 255, 0.745);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(252, 159, 255, 0.745);
+  border-radius: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  transition: all 0.5s;
 }
 .cuerpoServicios .decoracionServicios .circuloVertical:hover {
-  color: white;
+  background-color: white;
 }
 
-/*/media queries de servicios/*/
-/*/media queries de servicios/*/
+/*/TABLET/*/
 @media screen and (max-width: 1200px) {
   .cuerpoServicios {
     display: grid;
@@ -261,6 +435,7 @@ body {
     display: none;
   }
 }
+/*/MOBILE/*/
 @media screen and (max-width: 600px) {
   .cuerpoServicios {
     display: flex;
@@ -296,20 +471,17 @@ body {
   grid-template-rows: 1fr;
   grid-template-areas: "charly        contenidoSobreMi";
 }
-
-.charly {
+.cuerpoSobreMi .charly {
   grid-area: charly;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.charly img {
+.cuerpoSobreMi .charly img {
   border-radius: 50%;
   border: 2px solid;
 }
-
-.contenidoSobreMi {
+.cuerpoSobreMi .contenidoSobreMi {
   grid-area: contenidoSobreMi;
   display: flex;
   flex-direction: column;
@@ -318,172 +490,21 @@ body {
   right: 20%;
 }
 
-/*/ESTILOS DE PORTFOLIO/*/
-.cuerpoPortfolio {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-template-areas: "decoracionPortfolio        contenidoPortfolio";
-}
-
-.contenidoPortfolio {
-  grid-area: contenidoPortfolio;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.decoracionPortfolio {
-  grid-area: decoracionPortfolio;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.link {
-  border: 2px solid;
-  color: rgba(252, 159, 255, 0.745);
-  padding: 0, 5%;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: all 0.5s;
-}
-
-.link:hover {
-  color: white;
-}
-
-/*/ESTILOS DE CONTACTO/*/
-.contenidoContacto {
-  margin: 3%;
-  position: relative;
-  left: 40%;
-}
-
-.contenidoContacto input {
-  border-radius: 10px;
-  background-color: rgba(252, 159, 255, 0.745);
-  border: none;
-  padding: 1em;
-}
-
-.contenidoContacto textarea {
-  border-radius: 10px;
-  background-color: rgba(252, 159, 255, 0.745);
-}
-
-.contenidoContacto select {
-  background-color: rgba(252, 159, 255, 0.745);
-}
-
 /*/TABLET/*/
 @media screen and (max-width: 1200px) {
-  /*/HEADER Y FOOTER/*/
-  .cabecera {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo {
-    padding-left: 0%;
-    margin-top: 1%;
-  }
-  .menu {
-    display: flex;
-    list-style-type: none;
-    width: auto;
-    justify-content: space-evenly;
-    position: relative;
-    right: 0%;
-  }
-  .menu a {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .pie {
-    max-height: 10rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .contenidoFooter {
-    width: 100%;
-    display: flex;
-  }
-  .legal {
-    color: rgba(255, 255, 255, 0.4745098039);
-    font-size: 80%;
-    font-weight: 300;
-    padding-right: 0%;
-  }
-  .redesTodas {
-    display: flex;
-    list-style-type: none;
-    width: 100%;
-    padding-left: 0%;
-    justify-content: space-around;
-  }
-  .redesTodas li a {
-    color: rgba(255, 255, 255, 0.577);
-    font-size: 100%;
-    transition: all 0.5s;
-  }
-  /*/HOME/*/
-  .cuerpoHome {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "tituloHome" "contenidoHome";
-  }
-  .tituloHome {
-    grid-area: tituloHome;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-  }
-  .decoracionHome {
-    display: none;
-  }
-  .contenidoHome {
-    grid-area: contenidoHome;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    right: 0rem;
-    bottom: 25%;
-  }
-  .contenedorTrabajo {
-    max-width: auto;
-    max-height: auto;
-    border-radius: 0px;
-    overflow: hidden;
-  }
-  .trabajoDestacado {
-    color: rgba(252, 159, 255, 0.745);
-    width: 25rem;
-    border-top: 0rem solid;
-    border-bottom: 0rem solid;
-    border-radius: 20px;
-  }
-  /*/SOBRE MI/*/
   .cuerpoSobreMi {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "charly             charly" "contenidoSobreMi   contenidoSobreMi";
   }
-  .charly {
+  .cuerpoSobreMi .charly {
     padding-top: 5%;
   }
-  .charly img {
+  .cuerpoSobreMi .charly img {
     width: 10rem;
   }
-  .contenidoSobreMi {
+  .cuerpoSobreMi .contenidoSobreMi {
     grid-area: contenidoSobreMi;
     display: flex;
     padding: 5%;
@@ -493,17 +514,122 @@ body {
     top: 0%;
     right: 0%;
   }
-  .contenidoSobreMi h1 {
+  .cuerpoSobreMi .contenidoSobreMi h1 {
     line-height: 10%;
   }
-  /*/PORTFOLIO/*/
+}
+/*/MOBILE/*/
+@media screen and (max-width: 600px) {
+  .contenidoSobreMi {
+    font-size: 70%;
+  }
+}
+/*/ESTILOS DE PORTFOLIO/*/
+.cuerpoPortfolio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "decoracionPortfolio        contenidoPortfolio";
+}
+.cuerpoPortfolio .contenidoPortfolio {
+  grid-area: contenidoPortfolio;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.cuerpoPortfolio .contenidoPortfolio .linkUno {
+  color: rgb(0, 64, 202);
+}
+.cuerpoPortfolio .contenidoPortfolio .linkDos {
+  color: rgba(255, 0, 102, 0.745);
+}
+.cuerpoPortfolio .decoracionPortfolio {
+  grid-area: decoracionPortfolio;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cuerpoPortfolio .decoracionPortfolio .circuloVertical {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(252, 159, 255, 0.745);
+  border-radius: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  transition: all 0.5s;
+}
+.cuerpoPortfolio .decoracionPortfolio .circuloVertical:hover {
+  background-color: white;
+}
+
+/*/TABLET/*/
+@media screen and (max-width: 1200px) {
   .contenidoPortfolio {
     padding-right: 10%;
   }
-  .link {
+  .contenidoPortfolio .link {
     color: white;
   }
-  /*/CONTACTO/*/
+}
+/*/MOBILE/*/
+@media screen and (max-width: 600px) {
+  .cuerpoPortfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .cuerpoPortfolio .contenidoPortfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 5%;
+  }
+  .cuerpoPortfolio .contenidoPortfolio .link {
+    border: 2px solid;
+    color: white;
+    padding: 0, 5%;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+  .cuerpoPortfolio .contenidoPortfolio .link:hover {
+    color: white;
+  }
+  .cuerpoPortfolio .decoracionPortfolio {
+    display: none;
+  }
+}
+/*/ESTILOS DE CONTACTO/*/
+.contenidoContacto {
+  margin: 3%;
+  position: relative;
+  left: 40%;
+}
+.contenidoContacto input {
+  border-radius: 10px;
+  background-color: rgba(252, 159, 255, 0.745);
+  border: none;
+  padding: 1em;
+}
+.contenidoContacto textarea {
+  border-radius: 10px;
+  background-color: rgba(252, 159, 255, 0.745);
+  border: none;
+  padding: 1em;
+}
+.contenidoContacto select {
+  background-color: rgba(252, 159, 255, 0.745);
+  border: none;
+  padding: 1em;
+}
+
+/*/TABLET/*/
+@media screen and (max-width: 1200px) {
   .contenidoContacto {
     color: white;
     margin: 3%;
@@ -513,95 +639,6 @@ body {
 }
 /*/MOBILE/*/
 @media screen and (max-width: 600px) {
-  /*/HEADER Y FOOTER/*/
-  .cabecera {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo {
-    width: 50%;
-    position: relative;
-    left: 20%;
-  }
-  .menu {
-    display: flex;
-    list-style-type: none;
-    width: auto;
-    justify-content: space-evenly;
-    position: relative;
-    right: 5%;
-  }
-  .menu a {
-    font-size: 70%;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .pie {
-    display: flex;
-    flex-direction: column;
-  }
-  .redesTodas {
-    padding-left: 15%;
-  }
-  .redesTodas li a {
-    font-size: 100%;
-  }
-  /*/HOME/*/
-  .cuerpoHome {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .tituloHome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    margin-bottom: 30%;
-    padding-top: 10%;
-  }
-  .trabajoDestacado {
-    width: 100%;
-    border-radius: 0%;
-    border-top: 0rem solid;
-    border-bottom: 0rem solid;
-  }
-  /*/SOBRE MI/*/
-  .contenidoSobreMi {
-    font-size: 70%;
-  }
-  /*/PORTFOLIO/*/
-  .cuerpoPortfolio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .contenidoPortfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 5%;
-  }
-  .decoracionPortfolio {
-    display: none;
-  }
-  .link {
-    border: 2px solid;
-    color: white;
-    padding: 0, 5%;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.5s;
-  }
-  .link:hover {
-    color: white;
-  }
-  /*/CONTACTO/*/
   .contenidoContacto {
     margin: 3%;
     position: relative;
