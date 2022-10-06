@@ -604,6 +604,28 @@ body {
     display: none;
   }
 }
+.cuerpoPortfolioCopia {
+  width: 100%;
+  height: 100%;
+}
+
+.containerPortfolio {
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.containerPortfolio .cardPortfolio {
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+} /*# sourceMappingURL=portfolioCopia.css.map */
 /*/ESTILOS DE CONTACTO/*/
 .contenidoContacto {
   margin: 3%;
