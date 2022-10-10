@@ -1,17 +1,6 @@
 /*/Variables sueltas/*/
 /*/MAPA (lo uso en el home)/*/
 /*/EXTEND (lo uso en portfolio)/*/
-.cuerpoPortfolio .contenidoPortfolio .linkDos, .cuerpoPortfolio .contenidoPortfolio .linkUno {
-  border: 2px solid;
-  padding: 0, 5%;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: all 0.5s;
-}
-.cuerpoPortfolio .contenidoPortfolio .linkDos:hover, .cuerpoPortfolio .contenidoPortfolio .linkUno:hover {
-  color: white;
-}
-
 /*/MIXIN (lo uso en contacto)/*/
 /*/ESTILOS BASE/*/
 * {
@@ -525,107 +514,199 @@ body {
   }
 }
 /*/ESTILOS DE PORTFOLIO/*/
-.cuerpoPortfolio {
+.cuerpoPortfolioCopia {
+  cursor: default;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-template-areas: "decoracionPortfolio        contenidoPortfolio";
-}
-.cuerpoPortfolio .contenidoPortfolio {
-  grid-area: contenidoPortfolio;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.cuerpoPortfolio .contenidoPortfolio .linkUno {
-  color: rgb(0, 64, 202);
-}
-.cuerpoPortfolio .contenidoPortfolio .linkDos {
-  color: rgba(255, 0, 102, 0.745);
-}
-.cuerpoPortfolio .decoracionPortfolio {
-  grid-area: decoracionPortfolio;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.cuerpoPortfolio .decoracionPortfolio .circuloVertical {
-  width: 5rem;
-  height: 5rem;
-  background-color: rgba(252, 159, 255, 0.745);
-  border-radius: 50%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  transition: all 0.5s;
-}
-.cuerpoPortfolio .decoracionPortfolio .circuloVertical:hover {
-  background-color: white;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 8fr;
+  grid-template-areas: "tituloPortfolioCopia" "tituloPortfolioCopia" "contenidoPortfolioCopia" "contenidoPortfolioCopia";
 }
 
-/*/TABLET/*/
+.tituloPortfolioCopia {
+  grid-area: tituloPortfolioCopia;
+  display: flex;
+  justify-content: center;
+}
+
+.contenidoPortfolioCopia {
+  grid-area: contenidoPortfolioCopia;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 2%;
+  color: white;
+  background-color: rgb(61, 5, 112);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px white solid;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.imgCard {
+  width: 100%;
+  border-bottom: 2px white;
+}
+
+.descripcionCard {
+  margin: 10px;
+  text-align: center;
+}
+
+.linkCard {
+  background-color: aqua;
+  text-decoration: none;
+  padding: 2%;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 5%;
+}
+
 @media screen and (max-width: 1200px) {
-  .contenidoPortfolio {
-    padding-right: 10%;
-  }
-  .contenidoPortfolio .link {
-    color: white;
+  .card {
+    width: 250px;
   }
 }
-/*/MOBILE/*/
 @media screen and (max-width: 600px) {
-  .cuerpoPortfolio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .cuerpoPortfolio .contenidoPortfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 5%;
-  }
-  .cuerpoPortfolio .contenidoPortfolio .link {
-    border: 2px solid;
-    color: white;
-    padding: 0, 5%;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.5s;
-  }
-  .cuerpoPortfolio .contenidoPortfolio .link:hover {
-    color: white;
-  }
-  .cuerpoPortfolio .decoracionPortfolio {
+  .tituloPortfolioCopia {
     display: none;
   }
+  .contenidoPortfolioCopia {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    margin: 2%;
+    color: white;
+    background-color: rgba(60, 5, 112, 0);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0px white solid;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  .imgCard {
+    display: none;
+  }
+  .descripcionCard {
+    margin: 10px;
+    text-align: center;
+  }
+  .linkCard {
+    background-color: aqua;
+    text-decoration: none;
+    padding: 2%;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 5%;
+  }
 }
+/*/ESTILOS DE PORTFOLIO/*/
 .cuerpoPortfolioCopia {
-  width: 100%;
-  height: 100%;
+  cursor: default;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 8fr;
+  grid-template-areas: "tituloPortfolioCopia" "tituloPortfolioCopia" "contenidoPortfolioCopia" "contenidoPortfolioCopia";
 }
 
-.containerPortfolio {
-  width: 100%;
-  max-width: 900px;
-  height: 450px;
+.tituloPortfolioCopia {
+  grid-area: tituloPortfolioCopia;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  margin: auto;
 }
 
-.containerPortfolio .cardPortfolio {
-  width: 330px;
-  height: 430px;
-  border-radius: 8px;
+.contenidoPortfolioCopia {
+  grid-area: contenidoPortfolioCopia;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 2%;
+  color: white;
+  background-color: rgb(61, 5, 112);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px white solid;
+  border-radius: 30px;
   overflow: hidden;
-  margin: 20px;
-} /*# sourceMappingURL=portfolioCopia.css.map */
+}
+
+.imgCard {
+  width: 100%;
+  border-bottom: 2px white;
+}
+
+.descripcionCard {
+  margin: 10px;
+  text-align: center;
+}
+
+.linkCard {
+  background-color: aqua;
+  text-decoration: none;
+  padding: 2%;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 5%;
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tituloPortfolioCopia {
+    display: none;
+  }
+  .contenidoPortfolioCopia {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    margin: 2%;
+    color: white;
+    background-color: rgba(60, 5, 112, 0);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0px white solid;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  .imgCard {
+    display: none;
+  }
+  .descripcionCard {
+    margin: 10px;
+    text-align: center;
+  }
+  .linkCard {
+    background-color: aqua;
+    text-decoration: none;
+    padding: 2%;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 5%;
+  }
+}
 /*/ESTILOS DE CONTACTO/*/
 .contenidoContacto {
   margin: 3%;
