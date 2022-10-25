@@ -666,29 +666,6 @@ body {
   font-weight: 300;
   line-height: 20%;
 }
-.cuerpoContacto .contenidoContacto {
-  /*
-  input{
-      background-color: rgb(224, 122, 255);
-      border: none;
-      padding: 7%;
-      border-radius: 10px;
-  }
-  select{
-      width: 78%;
-      background-color: rgb(224, 122, 255);
-      border: none;
-      border-radius: 10px;
-      padding: 7%;
-  }
-  textarea{
-      background-color: rgb(224, 122, 255);
-      border: none;
-      border-radius: 10px;
-      min-height: 100px;
-  }
-  */
-}
 .cuerpoContacto .contenidoContacto .cparrafo {
   font-size: 100%;
   font-weight: 300;
