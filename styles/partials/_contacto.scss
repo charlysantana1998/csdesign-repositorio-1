@@ -25,23 +25,13 @@
             font-weight: 300;
         }
         input{
-            background-color: rgb(224, 122, 255);
-            border: none;
-            padding: 7%;
-            border-radius: 10px;
+            @include contact($paddingDef: 7%, $minHeight: 0, $widthCon)
         }
         select{
-            width: 78%;
-            background-color: rgb(224, 122, 255);
-            border: none;
-            padding: 7%;
-            border-radius: 10px;
+            @include contact($paddingDef: 7%, $minHeight: 0, $widthCon: 78%)
         }
         textarea{
-            background-color: rgb(224, 122, 255);
-            border: none;
-            border-radius: 10px;
-            min-height: 100px;
+            @include contact($paddingDef, $minHeight: 100%, $widthCon: 200px)
         }
     }
  }

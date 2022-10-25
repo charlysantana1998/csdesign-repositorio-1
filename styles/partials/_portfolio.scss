@@ -1,65 +1,69 @@
 /*/ESTILOS DE PORTFOLIO/*/
 
-.cuerpoPortfolioCopia{
+.cuerpoPortfolio{
     cursor: default;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 8fr;
     grid-template-areas: 
-    "tituloPortfolioCopia"    "tituloPortfolioCopia"
-    "contenidoPortfolioCopia" "contenidoPortfolioCopia" ;
+    "tituloPortfolio"    "tituloPortfolio"
+    "contenidoPortfolio" "contenidoPortfolio" ;
+    .tituloPortfolio{
+        grid-area: tituloPortfolio;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .contenidoPortfolio{
+        grid-area: contenidoPortfolio;
+        display: flex;
+        justify-content: space-around;
+        .card{
+            margin: 2%;
+            color: white;
+            background-color: rgb(61, 5, 112);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px white solid;
+            border-radius: 30px;
+            overflow: hidden;
+            transition: all 0.5s;
+            &:hover{
+                background-color: rgb(89, 11, 162);
+            }
+            .imgCard{
+                width: 100%;
+                border-bottom: 2px white ;
+            }
+            
+            .descripcionCard{
+                margin: 10px;
+                text-align: center;
+            }
+            
+            .linkCardIG{
+                @extend %linkPortfolio;
+                background-color: rgb(255, 157, 29);
+            }
+            
+            .linkCardBE{
+                @extend %linkPortfolio;
+                background-color: rgb(48, 238, 255);
+            }
+        }
+    }
 }
 
-.tituloPortfolioCopia{
-    grid-area: tituloPortfolioCopia;
-    display: flex;
-    justify-content: center;
-}
 
-.contenidoPortfolioCopia{
-    grid-area: contenidoPortfolioCopia;
-    display: flex;
-    justify-content: space-around;
-}
-
-.card{
-    margin: 2%;
-    color: white;
-    background-color: rgb(61, 5, 112);
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px white solid;
-    border-radius: 30px;
-    overflow: hidden;
-}
-
-.imgCard{
-    width: 100%;
-    border-bottom: 2px white ;
-}
-
-.descripcionCard{
-    margin: 10px;
-    text-align: center;
-}
-
-.linkCard{
-    background-color: aqua;
-    text-decoration: none;
-    padding: 2%;
-    border: 2px solid white;
-    border-radius: 5px;
-    margin: 5%;
-}
 
 /*/TABLET/*/
 
 @media screen and (max-width: 1200px) {
     .card{
-        width: 250px;
+        width: 200px;
     }
     
 }
@@ -67,45 +71,64 @@
 /*/MOBILE/*/
 
 @media screen and (max-width: 600px) {
-    .tituloPortfolioCopia{
-        display: none;
-    }
-    
-    .contenidoPortfolioCopia{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .card{
-        margin: 2%;
-        color: white;
-        background-color: rgba(60, 5, 112, 0);
-        width: 100%;
+    .cuerpoPortfolio{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 0px white solid;
-        border-radius: 0px;
-        overflow: hidden;
-    }
-    
-    .imgCard{
-        display: none;
-    }
-    
-    .descripcionCard{
-        margin: 10px;
-        text-align: center;
-    }
-    
-    .linkCard{
-        background-color: aqua;
-        text-decoration: none;
-        padding: 2%;
-        border: 2px solid white;
-        border-radius: 5px;
-        margin: 5%;
+        .contenidoPortfolio{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .card{
+                margin: 2%;
+                color: white;
+                background-color: transparent;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                overflow: hidden;
+                transition: all 0.5s;
+                &:hover{
+                    background-color:transparent;
+                }
+                .imgCard{
+                    display: none;
+                }
+                .descripcionCard{
+                    margin: 0px;
+                    text-align: center;
+                }
+                .linkCardIG{
+                    background-color: aqua;
+                    text-decoration: none;
+                    padding: 2%;
+                    border: 2px solid white;
+                    border-radius: 5px;
+                    margin: 5%;
+                    transition: all 0.5s;
+                    &:hover{
+                        background-color: rgb(61, 5, 112);
+                        color: white;
+                        }
+                }
+                
+                .linkCardBE{
+                    background-color: aqua;
+                    text-decoration: none;
+                    padding: 2%;
+                    border: 2px solid white;
+                    border-radius: 5px;
+                    margin: 5%;
+                    transition: all 0.5s;
+                    &:hover{
+                        background-color: rgb(61, 5, 112);
+                        color: white;
+                        }
+                }
+            }
+        }
     }
 }
